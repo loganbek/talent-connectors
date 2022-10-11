@@ -15,8 +15,11 @@ We are looking for your high-level thoughts on whatever simple form you prefer (
 ## Systems
 
 ### How would you design the infrastructure of this peer-to-peer referral system such that it is as trustless and efficient as possible?
-Connectors match talent with talent-requests (manually or via automated suggestions). Filled talent-requests are sent to Clients for approval. Client-approved talent-requests are sent to Talent for approval. Finally Connector recieves Talent & Client approved talent-requests for final review (can remove this step, efficiency--). 
-
+1) **NEW** - new talent-requests -> m2) - Connectors match Talent with talent-requests (manually or via automated suggestions). 
+2) **SUGGESTED** Filled talent-requests are sent to Clients for approved **New** again. Accepted -> Client.
+3) **CLIENT_APPROVED** Client-approved talent-requests are sent to Talent for approval. Rejected talent-requests become **New** again.
+4) __OPTIONAL__ **FINAL_REVIEW** Finally, Connector recieves Talent & Client approved talent-requests for final review. Automatically become **Finalized** in X days set in config. (can remove this step, efficiency--). 
+5) **FINALIZED** talent-requests are stored long term on ledger. (IPFS -> shortterm, ETH?? L2?? SKALE?? -> longterm) Connector gets paid.
 ### What parts need to be decentralized?
 ether-js for payment, IPFS for storage, and a smart contract for the marketplace.
 Zapper SDK for swaps.
@@ -28,6 +31,10 @@ Next.js or Meteor.js for the frontend.
 ## WIP - Connectors recieve automated suggested talent-requests based on talent-requests "talent-skills", "talent-types", and "availability".
 match 60-100% configurable via Connector && Talent dashboards.
 
+<!-- request-state -->
+{
+    "request-state": ["NEW", "SUGGESTED", "CLIENT-APPROVED", "TALENT-APPROVED", "FINAL-REVIEW", "FINALIZED"]
+}
 
 trustless + efficient
 

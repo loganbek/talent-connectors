@@ -10,15 +10,15 @@ We are looking for your high-level thoughts on whatever simple form you prefer (
 
 ## Questions
 
-1) What is the most important metric for efficiency? Should we optimized for shortest time to a certain talent-request state? Or should we optimize for the number of talent requests that are fulfilled? Or something else?
+1) What is the most important metric for efficiency? Should we optimized for shortest time to a certain talent-request state? Or should we optimize for the number of talent requests that are fulfilled? Or something else? Optimize for shortest time to talent-request `state = CLIENT_APPROVED` seems reasonable.
 
 2) What happens to the talent requests that are not fulfilled (ever), or that are not accepted by Connectors, Clients, Talent multiple times? Do they get deleted? Do they get archived? Do they get sent to a different connector? Do they get sent to a different connector after a certain amount of time?
 
-3) What do we need to keep track of for Connectors? Number of talent-requests filled?
+3) What do we need to keep track of for Connectors? Number of talent-requests filled? Currently held talent-requests. 
 
-4) Does this system need to have a mechanism for Client and Talent onboarding/offboarding? If so, what does that look like? How about for Connectors?
+4) Does this system need to have a mechanism for Client and Talent onboarding/offboarding? If so, what does that look like? How about for Connectors? Ignoring this mechanism for now.
 
-5) What currency do we use for the marketplace? Do we use a stablecoin? Do we use a marketplace token? Do we use a combination of these? Are we building the marketplace around a specific chain (L2)? Is L1 infeasible due to gas costs? What is most important here?
+5) What currency do we use for the marketplace? Do we use a stablecoin? Do we use a marketplace token? Do we use a combination of these? Are we building the marketplace around a specific chain (L2)? Is L1 infeasible due to gas costs? What is most important here? Polygon, Arbitrum, Avalanche seems like a reasonable choice for L2, although ETH L1 may be be possible short term in exchange for much higher gas costs.
 
 ## System Components
 

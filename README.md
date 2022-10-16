@@ -34,6 +34,7 @@ We are looking for your high-level thoughts on whatever simple form you prefer (
 ### What parts need to be decentralized?
 
 ether-js for payment, IPFS for storage, and a smart contract for the marketplace.
+<https://book.getfoundry.sh/forge/cheatcodes>.
 
 ### What parts don't?
 
